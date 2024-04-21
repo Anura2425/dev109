@@ -15,7 +15,7 @@ body {
 }
 .white, .black{
  border: 1px solid black;
- width: 11%;
+ width: 12%;
  height: 60px;
  float:left;
 }
@@ -37,7 +37,7 @@ body {
   margin-top:20%;
   margin-left:10%;
   margin-right:10%;
-  margin-bottom:5%;
+  margin-bottom:20%;
 }
 #title {
  position:fixed;
