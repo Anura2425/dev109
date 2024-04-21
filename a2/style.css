@@ -15,7 +15,7 @@ body {
 }
 .white, .black{
  border: 1px solid black;
- width: 12%;
+ width: 11%;
  height: 60px;
  float:left;
 }
@@ -26,15 +26,12 @@ body {
  background-color:#787878;
 }
 #footer{
- position:fixed;
- top:720px;
- left:0px; 
- padding:10px;
- margin:0px;
- width:100%;
- background-color:lightblue;
- text-align:center;
- clear:both;
+  background-color:lightblue;
+  border:solid 1px;
+  padding:10px
+  margin:10px;
+  text-align:center;
+  clear:both;
 }
 #container{
   margin-top:20%;
@@ -56,4 +53,3 @@ body {
  font-weight: normal;
  font-style: normal;
 }
-
