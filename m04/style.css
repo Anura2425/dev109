@@ -3,17 +3,19 @@
   font-family: Arial, Verdana, sans-serif;
   color: #665544;
   text-align: center;
-  background-image: url("backgroundimage.jpg");
 }
 
 body {
   width: 90%;
   margin: 0 auto;}
   #content {
-  overflow: auto; 
+  overflow: auto;
+  background-image: url("backgroundimage.jpg");
+  background-size: cover;
+  background-position: center top; 
 }
 h1{
-   font-family: 'AvaraBold';
+   font-family: 'Poppins';
    font-weight: normal;
    font-style: normal;
 }
@@ -61,6 +63,10 @@ li {
 }
 #feature{
   background-color: lightgreen;
+  background-image: url("bird.png");
+  background-size:contain;
+  background-position: right;
+  background-repeat:no-repeat;}
 }
 .column1{
   background-color: tan;
@@ -74,5 +80,4 @@ li {
 #footer{
   background-color: lightblue;
 }
-
 
