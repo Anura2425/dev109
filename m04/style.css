@@ -3,6 +3,7 @@
   font-family: Arial, Verdana, sans-serif;
   color: #665544;
   text-align: center;
+  background-image: url("backgroundimage.jpg");
 }
 
 body {
@@ -10,7 +11,6 @@ body {
   margin: 0 auto;}
   #content {
   overflow: auto; 
-  background-image: url("backgroundimage.jpg");
 }
 h1{
    font-family: 'AvaraBold';
