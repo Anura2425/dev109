@@ -7,12 +7,13 @@
 
 body {
   width: 90%;
-  margin: 0 auto;}
-  #content {
-  overflow: auto;
+  margin: 0 auto;
   background-image: url("backgroundimage.jpg");
   background-size: cover;
-  background-position: center top; 
+  background-position: center top;
+}
+  #content {
+  overflow: auto; 
 }
 h1{
    font-family: 'Poppins';
@@ -62,8 +63,7 @@ li {
   background-color: orange;
 }
 #feature{
-  background-color: lightgreen;
-  background-image: url("bird.png");
+  background: url("bird.png"), lightgreen;
   background-size:contain;
   background-position: right;
   background-repeat:no-repeat;}
