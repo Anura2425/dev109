@@ -63,11 +63,11 @@ li {
   background-color: orange;
 }
 #feature{
-  background-color: lightgreen;
-  background-image: url("flower.png");
-  background-repeat: no-repeat;
+  background-color:lightgreen;
+  background-image:url("flower.png");
   background-size:contain;
   background-position: right;
+  background-repeat:no-repeat;
 }
 
 .column1{
