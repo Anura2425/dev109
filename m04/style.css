@@ -62,12 +62,6 @@ li {
 #nav{
   background-color: orange;
 }
-#feature{
-  background: url("bird.png"), lightgreen;
-  background-size:contain;
-  background-position: right;
-  background-repeat:no-repeat;}
-}
 .column1{
   background-color: tan;
 }
@@ -80,4 +74,15 @@ li {
 #footer{
   background-color: lightblue;
 }
+#feature{
+  background: url("flower.png"), lightgreen;
+  background-size:contain;
+  background-position: right;
+  background-repeat:no-repeat;}
+}
+
+
+
+
+
 
