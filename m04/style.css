@@ -64,9 +64,9 @@ li {
 }
 #feature{
   background: url("flower.png"), lightgreen;
-  background-repeat: no-repeat;
   background-size:contain;
   background-position: right;
+  background-repeat: no-repeat;
 }
 
 .column1{
