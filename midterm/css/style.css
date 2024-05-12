@@ -119,14 +119,10 @@ border-top: 1px solid #1f1f1f;
 .right { float: right; }
 .clear { clear: both; }
 
-.column {
-  float: left;
-  width: 50%;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
 }
