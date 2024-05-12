@@ -54,6 +54,7 @@
     // Function to generate a single line of the rhombus
     function generateLine(length, color, symbol, lineNumber) {
         let line = '';
+        lineNumber++;
         const spaces = ' '.repeat(height - lineNumber);
         for (let i = 0; i < length; i++) {
             line += `<span style="color: ${color}">${symbol}</span>`;
