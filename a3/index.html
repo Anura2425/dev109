@@ -6,35 +6,40 @@
     <title>Artifact 03</title>
   </head>
   <body>
-    <label>What is the size of Rhombus?</label><br>
-    <input type="text" id="rHeight" value="5" size="5">
-    <br>
-    <label>Choose color for Even position</label><br>
-    <select id="colorEven">
-      <option value="#0000FF">Blue</option>
-      <option value="#FF0000">Red</option>
-      <option value="#FF9900">Orange</option>
-    </select><br>
+     <h2>Rhombus Settings</h2>
+ <form id="rhombus-form">
+   <label for="height">Height of each section:</label>
+   <input type="number" id="height" name="height" min="1" max="20" required>
 
-    <label>Choose color for Odd position</label><br>
-    <select id="colorOdd">
-      <option value="#FF0099">Pink</option>
-      <option value="#33FF00">Green</option>
-      <option value="#660099">Purple</option>
-    </select>
-    <br>
-    <label>Choose symbol for Rhombus</label>
-    <select id="symbol">
-      <option value="*">*</option>
-      <option value="$">$</option>
-      <option value="@">@</option>
-    </select>
-    <br>
-    <button onclick="createRhombus(document.getElementById('rHeight').value, document.getElementById('colorEven').value, document.getElementById('colorOdd').value, document.getElementById('symbol').value);">Display Rhombus</button>
-    <div id="upLeft">Rhombus</div>
-    <div id="upRight"></div>
-    <div id="downLeft"></div>
-    <div id="downRight"></div>
-    <script src="script.js"></script>
+   <label for="odd-color">Color for odd position:</label>
+   <select id="odd-color" name="odd-color" required>
+     <option value="">Select a color</option>
+     <option value="red">Red</option>
+     <option value="green">Green</option>
+     <option value="blue">Blue</option>
+   </select>
+
+   <label for="even-color">Color for even position:</label>
+   <select id="even-color" name="even-color" required>
+     <option value="">Select a color</option>
+     <option value="red">Red</option>
+     <option value="green">Green</option>
+     <option value="blue">Blue</option>
+   </select>
+
+   <label for="symbol">Symbol to draw the rhombus:</label>
+   <select id="symbol" name="symbol" required>
+     <option value="">Select a symbol</option>
+     <option value="*">*</option>
+     <option value="^">^</option>
+     <option value="%">%</option>
+   </select>
+
+   <button type="button" onclick="drawRhombus()">Draw Rhombus</button>
+ </form>
+
+ <h2>Rhombus</h2>
+ <div class="rhombus-section" id="rhombus"></div>
+
   </body>
 </html>
