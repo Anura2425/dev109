@@ -2,9 +2,7 @@ body {
 font-family: Arial, sans-serif;
 margin: 0;
 padding: 0; 
-background-image: url("images/backgroundimage.jpg");
-background-size: cover; 
-background-position: center top;
+background: #e5e5e5;
 color: #3f3f3f;
 font-size: 16px;
 line-height: 24px;
