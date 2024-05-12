@@ -79,10 +79,10 @@ function generateRhombus() {
     const bottomLeft = generateBottomLeft(height, oddColor, evenColor, symbol);
     const bottomRight = generateBottomRight(height, oddColor, evenColor, symbol);
 
-    document.getElementById('topLeft').textContent = topLeft;
-    document.getElementById('topRight').textContent = topRight;
-    document.getElementById('bottomLeft').textContent = bottomLeft;
-    document.getElementById('bottomRight').textContent = bottomRight;
+    document.getElementById('topLeft').innerHTML = topLeft;
+    document.getElementById('topRight').innerHTML = topRight;
+    document.getElementById('bottomLeft').innerHTML = bottomLeft;
+    document.getElementById('bottomRight').innerHTML = bottomRight;
 }
 
 function generateTopLeft(height, oddColor, evenColor, symbol) {
