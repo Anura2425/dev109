@@ -4,90 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artifact 03</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .section {
+            display: inline-block;
+            text-align: left;
+            margin: 20px;
+        }
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
 <body>
-    <h1>Rhombus Generator</h1>
-
-    <!-- HTML form section -->
+    <h1>Artifact 03</h1>
     <form>
-        <label for="height">Height of each section of the rhombus:</label>
-        <input type="number" id="height" name="height" min="1" required>
-
-        <label for="oddColor">Color for the odd position:</label>
+        <label for="height">Height of each section:</label>
+        <input type="number" id="height" name="height" min="1" max="10" value="5" required>
+        <br><br>
+        <label for="oddColor">Odd position color:</label>
         <select id="oddColor" name="oddColor" required>
-            <option value="">Select a color</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
         </select>
-
-        <label for="evenColor">Color for the even position:</label>
+        <br><br>
+        <label for="evenColor">Even position color:</label>
         <select id="evenColor" name="evenColor" required>
-            <option value="">Select a color</option>
             <option value="yellow">Yellow</option>
-            <option value="purple">Purple</option>
             <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
         </select>
-
-        <label for="symbol">Symbol to be used to draw the rhombus:</label>
+        <br><br>
+        <label for="symbol">Symbol:</label>
         <select id="symbol" name="symbol" required>
-            <option value="">Select a symbol</option>
             <option value="*">*</option>
             <option value="%">%</option>
-            <option value="$">$</option>
+            <option value="#">#</option>
         </select>
-
+        <br><br>
         <button type="button" onclick="generateRhombus()">Generate Rhombus</button>
     </form>
-
-    <!-- Section to display the rhombus -->
-    <div id="rhombusContainer"></div>
-
-    <script>
-    // JavaScript function to generate the rhombus
-    function generateRhombus() {
-        const height = document.getElementById('height').value;
-        const oddColor = document.getElementById('oddColor').value;
-        const evenColor = document.getElementById('evenColor').value;
-        const symbol = document.getElementById('symbol').value;
-
-    // Function to generate a single line of the rhombus
-    function generateLine(length, color, symbol, lineNumber) {
-        let line = '';
-        lineNumber++;
-        const spaces = ' '.repeat(height - lineNumber);
-        for (let i = 0; i < length; i++) {
-            line += `<span style="color: ${color}">${symbol}</span>`;
-        }
-        return `${spaces}${line}`;
-    }
-
-    // Function to generate the top part of the rhombus
-    function generateTopPart() {
-        let topPart = '';
-        for (let i = 1; i <= height; i++) {
-            const color = i % 2 === 0 ? evenColor : oddColor;
-            topPart += `<div>${generateLine(i, color, symbol, i)}</div>`;
-        }
-        return topPart;
-    }
-
-    // Function to generate the bottom part of the rhombus
-    function generateBottomPart() {
-        let bottomPart = '';
-        for (let i = height - 1; i >= 1; i--) {
-            const color = i % 2 === 0 ? evenColor : oddColor;
-            bottomPart += `<div>${generateLine(i, color, symbol, height - i + 1)}</div>`;
-        }
-        return bottomPart;
-    }
-
-    // Combine the top and bottom parts to form the rhombus
-    const rhombus = `<div>${generateTopPart()}${generateBottomPart()}</div>`;
-
-    // Display the rhombus in the container
-    document.getElementById('rhombusContainer').innerHTML = rhombus;
-}
-    </script>
+    <div>
+        <div class="section">
+            <h3>Top Left</h3>
+            <pre id="topLeft"></pre>
+        </div>
+        <div class="section">
+            <h3>Top Right</h3>
+            <pre id="topRight"></pre>
+        </div>
+        <div class="section">
+            <h3>Bottom Left</h3>
+            <pre id="bottomLeft"></pre>
+        </div>
+        <div class="section">
+            <h3>Bottom Right</h3>
+            <pre id="bottomRight"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
