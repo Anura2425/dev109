@@ -44,7 +44,7 @@
     <div id="rhombusContainer"></div>
 
     <script>
-        // JavaScript function to generate the rhombus
+    // JavaScript function to generate the rhombus
     function generateRhombus() {
         const height = document.getElementById('height').value;
         const oddColor = document.getElementById('oddColor').value;
@@ -52,13 +52,13 @@
         const symbol = document.getElementById('symbol').value;
 
     // Function to generate a single line of the rhombus
-    function generateLine(length, color, symbol) {
+    function generateLine(length, color, symbol, lineNumber) {
         let line = '';
-        const spaces = ' '.repeat(height - length);
+        const spaces = ' '.repeat(height - lineNumber);
         for (let i = 0; i < length; i++) {
             line += `<span style="color: ${color}">${symbol}</span>`;
         }
-        return `${spaces}${line}${spaces}`;
+        return `${spaces}${line}`;
     }
 
     // Function to generate the top part of the rhombus
@@ -66,7 +66,7 @@
         let topPart = '';
         for (let i = 1; i <= height; i++) {
             const color = i % 2 === 0 ? evenColor : oddColor;
-            topPart += `<div>${generateLine(i, color, symbol)}</div>`;
+            topPart += `<div>${generateLine(i, color, symbol, i)}</div>`;
         }
         return topPart;
     }
@@ -76,7 +76,7 @@
         let bottomPart = '';
         for (let i = height - 1; i >= 1; i--) {
             const color = i % 2 === 0 ? evenColor : oddColor;
-            bottomPart += `<div>${generateLine(i, color, symbol)}</div>`;
+            bottomPart += `<div>${generateLine(i, color, symbol, height - i + 1)}</div>`;
         }
         return bottomPart;
     }
