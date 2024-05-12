@@ -1,66 +1,28 @@
-function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-  upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-  downRight(pHeight, pColorEven, pColorOdd, pSymbol);
-  upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-  downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-}
+function generateRhombus(height, oddColor, evenColor, symbol) {
+  let rhombus = '';
+  const maxWidth = height * 2 - 1;
 
-function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=0;i<pHeight;i++){
-    rLine +="<p>";
-    for(j=0;j<=i;j++){
-      if (j%2)
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+  // Top part
+  for (let i = 0; i < height; i++) {
+    let line = '';
+    for (let j = 0; j < maxWidth; j++) {
+      const color = (i + j) % 2 === 0 ? evenColor : oddColor;
+      const char = j >= height - i - 1 && j < height + i ? symbol : ' ';
+      line += `<span style="color: ${color};">${char}</span>`;
     }
-  rLine +="</p>";
-}
-document.getElementById("upRight").innerHTML = rLine;
-}
-
-function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
-    for(j=0;j<i;j++){
-      if (j%2)
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    }
-  rLine +="</p>";
+    rhombus += line + '<br>';
   }
-document.getElementById("downRight").innerHTML = rLine;
-}
 
-function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=0;i<pHeight;i++){
-    rLine +="<p>";
-    for(j=0;j<=i;j++){
-      if (j%2)
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
+  // Bottom part
+  for (let i = height - 2; i >= 0; i--) {
+    let line = '';
+    for (let j = 0; j < maxWidth; j++) {
+      const color = (i + j) % 2 === 0 ? evenColor : oddColor;
+      const char = j >= height - i - 1 && j < height + i ? symbol : ' ';
+      line += `<span style="color: ${color};">${char}</span>`;
     }
-  rLine +="</p>";
+    rhombus += line + '<br>';
   }
-document.getElementById("upLeft").innerHTML = rLine;
-}
 
-function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
-  var rLine ="";
-  for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
-    for(j=0;j<i;j++){
-      if (j%2)
-        rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-      else
-        rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    }
-  rLine +="</p>";
-  }
-document.getElementById("downLeft").innerHTML = rLine;
+  return rhombus;
 }
