@@ -54,12 +54,13 @@
     // Function to generate a single line of the rhombus
     function generateLine(length, color, symbol) {
         let line = '';
-        const spaces = ' '.repeat(height - length); // Calculate the number of spaces needed
+        const spaces = ' '.repeat(height - length);
         for (let i = 0; i < length; i++) {
             line += `<span style="color: ${color}">${symbol}</span>`;
         }
-        return `${spaces}${line}`; // Prepend the spaces before the line of symbols
+        return `${spaces}${line}${spaces}`;
     }
+
     // Function to generate the top part of the rhombus
     function generateTopPart() {
         let topPart = '';
