@@ -6,7 +6,7 @@
     <title>=Artifact 03</title>
 </head>
 <body>
-    <h1>Your Name</h1>
+    <h1>Rhombus Generator</h1>
 
     <!-- HTML form section -->
     <form>
@@ -45,22 +45,21 @@
 
     <script>
         // JavaScript function to generate the rhombus
-function generateRhombus() {
-    const height = document.getElementById('height').value;
-    const oddColor = document.getElementById('oddColor').value;
-    const evenColor = document.getElementById('evenColor').value;
-    const symbol = document.getElementById('symbol').value;
+    function generateRhombus() {
+        const height = document.getElementById('height').value;
+        const oddColor = document.getElementById('oddColor').value;
+        const evenColor = document.getElementById('evenColor').value;
+        const symbol = document.getElementById('symbol').value;
 
     // Function to generate a single line of the rhombus
     function generateLine(length, color, symbol) {
         let line = '';
-        const spaces = ' '.repeat(height - length);
+        const spaces = ' '.repeat(height - length); // Calculate the number of spaces needed
         for (let i = 0; i < length; i++) {
             line += `<span style="color: ${color}">${symbol}</span>`;
         }
-        return `${spaces}${line}`;
+        return `${spaces}${line}`; // Prepend the spaces before the line of symbols
     }
-
     // Function to generate the top part of the rhombus
     function generateTopPart() {
         let topPart = '';
