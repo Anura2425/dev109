@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const images = [
-        { src: 'Nature1.jpg', description: '1st Nature Picture, green mountain range.' },
-        { src: 'Nature2.jpg', description: '2nd Nature Picture, night time mountains.' },
-        { src: 'Nature3.jpg', description: '3rd Nature Picture, sunset mountain range.' },
-        { src: 'Nature4.jpg', description: '4th Nature Picture, sunrise mountain range.' },
-        { src: 'Nature5.jpg', description: '5th Nature Picture, cloudy mountain range.' }
+        { src: 'images/Nature1.jpg', description: '1st Nature Picture, green mountain range.' },
+        { src: 'images/Nature2.jpg', description: '2nd Nature Picture, night time mountains.' },
+        { src: 'images/Nature3.jpg', description: '3rd Nature Picture, sunset mountain range.' },
+        { src: 'images/Nature4.jpg', description: '4th Nature Picture, sunrise mountain range.' },
+        { src: 'images/Nature5.jpg', description: '5th Nature Picture, cloudy mountain range.' }
     ];
 
     const imgElement = document.getElementById('currentImage');
